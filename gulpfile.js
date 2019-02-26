@@ -71,7 +71,7 @@ gulp.task("build", ["clean", "img", "sass", "scripts"], function (){
   var buildJs = gulp.src("app/shikhans/js/**/*")
   .pipe(gulp.dest("dist/shikhans/js"));
   var buildHtml = gulp.src("app/shikhans/*.html")
-  .pipe(gulp.dest("dist"));
+  .pipe(gulp.dest("dist/shikhans"));
 });
 
 gulp.task("clear", function() {
