@@ -62,7 +62,7 @@ function interval() {
 
 for (var i = 0; i <= lh; i++) {
   $(".frame").get(i).setAttribute("id", "fr_" + i);
-  $("#fr_" + i).css({"background-image": "url(" + $("#fr_" + i + " img").attr("data-src") + ")",
+  $("#fr_" + i).css({"background-image": "url(" + $("#fr_" + i + " img").attr("src") + ")",
                       "background-size": "cover",
                   "background-position": "center center"
                 });
