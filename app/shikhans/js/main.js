@@ -184,8 +184,8 @@ shi.mySlider("#mySlider-1");
 
 // mobile menu BEGIN ########################################
 $(".bars").click(function() {
-  $(".min-menu").fadeToggle(300);
-  $(".backplane").fadeIn(300);
+  $(".min-menu, .backplane").fadeToggle(300);
+  // $(".backplane").fadeIn(300);
   $(".min-menu a, .backplane").click(function() {
     $(".min-menu").fadeOut(300);
     $(".backplane").fadeOut(300);

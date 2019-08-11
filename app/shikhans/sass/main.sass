@@ -19,6 +19,9 @@ a
     transition: 0.3s
 header
   position: fixed
+  display: flex
+  justify-content: space-between
+  align-items: center
   min-width: 400px
   top: 0
   left: 0
@@ -54,10 +57,11 @@ p
     margin: 20px
 %base-block
   position: relative
-  min-height: 650px
+  // min-height: 650px
   float: left
 .block-60
   @extend %base-block
+  min-height: 650px
   width: 60%
   img
     display: none
@@ -66,11 +70,12 @@ p
     min-height: 300px
 .block-40
   @extend %base-block
+  min-height: 650px
   width: 40%
   background-color: #ddd
   @media screen and (max-width: 800px)
     width: 100%
-    min-height: auto
+    min-height: initial !important
 @mixin base-title($size)
   position: relative
   margin-right: 60px
@@ -101,6 +106,10 @@ p
     display: none
   @media screen and (max-width: 800px)
     padding: 15px 0 15px 0
+.left-space
+  margin-left: 40px
+.vspace
+  padding: 30px 0
 .controls
   position: absolute
   top: 120px
@@ -118,7 +127,7 @@ p
   z-index: 4
   font-weight: 600
   color: white
-  background-color: rgba(0,0,0,0.3)
+  background-color: rgba(0, 0, 0, 0.3)
   padding: 5px 8px
   margin: 0 0 10px 10px
   border-radius: 4px
@@ -217,8 +226,19 @@ p
   background-color: #444
   margin: 0
   padding: 0
-  p, h3
-    color: white
+  p 
+    font-family: 'PT Sans', sans-serif
+    font-size: 18px
+    margin-top: 30px
+    margin-bottom: 30px
+    color: rgba(255, 255, 255, 0.75)
+    a 
+      color: rgba(7, 127, 204, 0.8) !important
+      border-color: rgba(7, 127, 204, 0.3) !important
+      &:hover
+        border-color: rgba(7, 127, 204, 0.0) !important
+  h3
+    color: #ffffff
 %base-block-content
   position: relative
   width: 100%
@@ -282,7 +302,10 @@ p
   @extend %pos-top
   bottom: 0
   cursor: pointer
-  text-align: center
+  // text-align: center
+  display: flex
+  justify-content: center
+  align-items: center
   z-index: 4
   color: white
   padding: 40px

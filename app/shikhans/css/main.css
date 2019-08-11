@@ -23,6 +23,18 @@ a {
 
 header {
   position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-width: 400px;
   top: 0;
   left: 0;
@@ -71,10 +83,10 @@ p {
 
 .block-60, .block-40 {
   position: relative;
-  min-height: 650px;
   float: left; }
 
 .block-60 {
+  min-height: 650px;
   width: 60%; }
   .block-60 img {
     display: none; }
@@ -84,12 +96,13 @@ p {
       min-height: 300px; } }
 
 .block-40 {
+  min-height: 650px;
   width: 40%;
   background-color: #ddd; }
   @media screen and (max-width: 800px) {
     .block-40 {
       width: 100%;
-      min-height: auto; } }
+      min-height: initial !important; } }
 
 .title-name {
   position: relative;
@@ -137,6 +150,12 @@ p {
   @media screen and (max-width: 800px) {
     .include {
       padding: 15px 0 15px 0; } }
+
+.left-space {
+  margin-left: 40px; }
+
+.vspace {
+  padding: 30px 0; }
 
 .controls {
   position: absolute;
@@ -274,8 +293,19 @@ p {
   background-color: #444;
   margin: 0;
   padding: 0; }
-  .dark p, .dark h3 {
-    color: white; }
+  .dark p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.75); }
+    .dark p a {
+      color: rgba(7, 127, 204, 0.8) !important;
+      border-color: rgba(7, 127, 204, 0.3) !important; }
+      .dark p a:hover {
+        border-color: rgba(7, 127, 204, 0) !important; }
+  .dark h3 {
+    color: #ffffff; }
 
 .slider, .content {
   position: relative;
@@ -351,7 +381,18 @@ p {
 .next-picture, .previous-picture {
   bottom: 0;
   cursor: pointer;
-  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 4;
   color: white;
   padding: 40px; }
