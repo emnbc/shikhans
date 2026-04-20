@@ -194,38 +194,6 @@ $(".bars").click(function() {
 // mobile menu END ########################################
 
 
-// button "Scroll to Top" BEGIN ########################################
-$("body").append("<div id='button-up'><span>Scroll To Top <i class='fa fa-angle-up fa-lg'></i></span></div>");
-$("#button-up").css({
-  "display": "none",
-  "right": "50px",
-  "margin": "0",
-  "position": "fixed",
-  "bottom": 0,
-  "outline":"none",
-  "color": "#fff",
-  "z-index": "50",
-  "background-color": "#000",
-  "border-radius": "10px 10px 0 0",
-  "text-decoration": "none",
-  "padding": "10px",
-  "opacity": "0.5",
-  "box-shadow": "0 0 20px rgba(0,0,0,0.7)",
-  "font-weight": "bold",
-  "cursor": "pointer"
-});
-$(window).scroll(function () {
-  $(this).scrollTop() > 200 ? $("#button-up").fadeIn(400) : $("#button-up").fadeOut(400);
-});
-$("#button-up").click(function () {
-    $("body,html").animate({
-        scrollTop: 0
-    }, 500);
-    return false;
-});
-// button "Scroll to Top" END ########################################
-
-
 // smooth scroll BEGIN ########################################
 $("a[href^='#']").click(function() {
   var el = $(this).attr("href");
