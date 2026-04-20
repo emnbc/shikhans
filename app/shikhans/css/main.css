@@ -294,7 +294,7 @@ p {
 
 .social {
   text-align: center;
-  padding: 20px;
+  padding: 0 20px 20px 20px;
 }
 @media screen and (max-width: 800px) {
   .social {
@@ -366,6 +366,7 @@ p {
   background-color: #444;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .dark p {
   font-family: "PT Sans", sans-serif;
