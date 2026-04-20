@@ -114,7 +114,7 @@ p
   position: absolute
   top: 120px
   right: 50px
-  z-index: 3
+  z-index: 5
   opacity: 0
   @media screen and (max-width: 800px)
     top: 80px
@@ -127,7 +127,7 @@ p
   z-index: 4
   font-weight: 600
   color: white
-  background-color: rgba(0, 0, 0, 0.3)
+  background-color: rgba(0, 0, 0, 0.2)
   padding: 5px 8px
   margin: 0 0 10px 10px
   border-radius: 4px
@@ -141,9 +141,13 @@ p
   @extend %base-controls-sld
   display: none
 .next
-  @extend %base-controls-sld
+  @extend %base-controls-gal
+  right: 0
+  opacity: 0
 .previous
-  @extend %base-controls-sld
+  @extend %base-controls-gal
+  left: 0
+  opacity: 0
 .google
   display: none
   position: relative

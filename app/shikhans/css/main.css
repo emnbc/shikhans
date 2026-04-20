@@ -199,7 +199,7 @@ p {
   position: absolute;
   top: 120px;
   right: 50px;
-  z-index: 3;
+  z-index: 5;
   opacity: 0;
 }
 @media screen and (max-width: 800px) {
@@ -212,21 +212,21 @@ p {
   }
 }
 
-.previous, .next, .play, .pause {
+.play, .pause {
   position: relative;
   cursor: pointer;
   float: right;
   z-index: 4;
   font-weight: 600;
   color: white;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 5px 8px;
   margin: 0 0 10px 10px;
   -webkit-border-radius: 4px;
           border-radius: 4px;
 }
 @media screen and (max-width: 800px) {
-  .previous, .next, .play, .pause {
+  .play, .pause {
     font-size: 14px;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
@@ -240,6 +240,16 @@ p {
 
 .play {
   display: none;
+}
+
+.next {
+  right: 0;
+  opacity: 0;
+}
+
+.previous {
+  left: 0;
+  opacity: 0;
 }
 
 .google {
@@ -466,12 +476,12 @@ p {
   z-index: 100;
 }
 
-.controls-gallery, .slider-gallery, .previous-picture, .next-picture {
+.controls-gallery, .slider-gallery, .previous-picture, .next-picture, .next, .previous {
   position: absolute;
   top: 0;
 }
 
-.previous-picture, .next-picture {
+.previous-picture, .next-picture, .next, .previous {
   bottom: 0;
   cursor: pointer;
   display: -webkit-box;
@@ -491,7 +501,7 @@ p {
   padding: 40px;
 }
 @media screen and (max-width: 800px) {
-  .previous-picture, .next-picture {
+  .previous-picture, .next-picture, .next, .previous {
     padding: 20px;
   }
 }

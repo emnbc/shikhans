@@ -9,7 +9,7 @@ $(".lazy").addClass("hidden").viewportChecker({
   offset: 50
 });
 
-$("h1, .controls").animate({ opacity: "1" }, 300);
+$("h1, .controls, .next, .previous").animate({ opacity: "1" }, 300);
 setTimeout(function() { $(".cost").hide(); $(".content").show(); }, 100);
 setTimeout(function() { $(".google").show(); }, 1500);
 
