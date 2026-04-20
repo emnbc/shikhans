@@ -82,7 +82,9 @@ gulp.task("build", gulp.series("clean", gulp.parallel("img", "sass", "scripts"),
     "app/shikhans/*.ico",
     "app/shikhans/*.png",
     "app/shikhans/*.svg",
-    "app/shikhans/*.webmanifest"
+    "app/shikhans/*.webmanifest",
+    "app/shikhans/*.xml",
+    "app/shikhans/*.txt"
   ], { allowEmpty: true })
   .pipe(gulp.dest("dist/shikhans"));
   done();
