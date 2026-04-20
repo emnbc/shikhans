@@ -77,7 +77,13 @@ gulp.task("build", gulp.series("clean", gulp.parallel("img", "sass", "scripts"),
   .pipe(gulp.dest("dist/shikhans/fonts"));
   var buildJs = gulp.src("app/shikhans/js/**/*", { allowEmpty: true })
   .pipe(gulp.dest("dist/shikhans/js"));
-  var buildHtml = gulp.src("app/shikhans/*.html", { allowEmpty: true })
+  var buildHtml = gulp.src([
+    "app/shikhans/*.html",
+    "app/shikhans/*.ico",
+    "app/shikhans/*.png",
+    "app/shikhans/*.svg",
+    "app/shikhans/*.webmanifest"
+  ], { allowEmpty: true })
   .pipe(gulp.dest("dist/shikhans"));
   done();
 }));
